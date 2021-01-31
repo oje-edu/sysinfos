@@ -121,3 +121,10 @@ net_io = psutil.net_io_counters()
 print(f"Gesamt Bytes gesendet: {adjust_size(net_io.bytes_sent)}")
 print(f"Gesamt Bytes erhalten: {adjust_size(net_io.bytes_recv)}")
 
+
+print('\n')
+print("-"*40, "FOOTA", "-"*40)
+print('\n')
+
+
+print("https://github.com/oje-edu/sysinfos")
