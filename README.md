@@ -27,9 +27,13 @@ is a Python script.
 
                 . venv/bin/activate
 
-        + install the dependencies
+                (or)
 
-            pip install -r requirements.txt
+                source venv/bin/activate
+
+                + now install the dependencies
+
+                    pip install -r requirements.txt
 
 ## start
 
