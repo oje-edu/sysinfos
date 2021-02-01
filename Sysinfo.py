@@ -7,9 +7,8 @@ print("-"*40, "Sysinfo", "-"*40)
 print("\n")
 uname = platform.uname();
 
-print(f"Dein System (es gibt nur Windows oder Unix based!) ist: {uname.system} based")
 print(f"Dem Gerät sein krass Name: {uname.node}")
-print(f"Release: {uname.release}")
+print(f"Dein System: {uname.system} - {uname.release}")
 print(f"Version: {uname.version}")
 #print(f"bit: {uname.machine}")
 print(f"Prozessor: {uname.processor}")
@@ -59,7 +58,7 @@ print('\n')
 swap = psutil.swap_memory()
 print(f"Gesamt: {adjust_size(swap.total)}")
 print(f"Verwendet: {adjust_size(swap.used)}")
-print(f"Frei: {adjust_size(swap.free)}")
+print(f"Verfügbar: {adjust_size(swap.free)}")
 print(f"Prozentual: {swap.percent}%")
 
 print('\n')
@@ -77,7 +76,7 @@ for p in partitions:
     continue
   print(f" Gesamt Grösse: {adjust_size(partition_usage.total)}")
   print(f" Verwendete: {adjust_size(partition_usage.used)}")
-  print(f" Frei: {adjust_size(partition_usage.free)}")
+  print(f" Verfügbar: {adjust_size(partition_usage.free)}")
   print(f" Prozentual: {partition_usage}%")
 
 
@@ -93,9 +92,9 @@ print('\n')
 gpus = GPUtil.getGPUs()
 for gpu in gpus:
   print(f"ID: {gpu.id}, Name: {gpu.name}")
-  print(f"\tLoad: {gpu.load*100}%")
+  print(f"\tAuslastung: {gpu.load*100}%")
   print(f"\tVerwendet: {gpu.memoryUsed}MB")
-  print(f"\tFrei:: {gpu.memoryFree}MB")
+  print(f"\tVerfügbar: {gpu.memoryFree}MB")
   print(f"\tGesamt: {gpu.memoryTotal}MB")
   print(f"\tTemperatur: {gpu.temperature} °C")
 
@@ -128,3 +127,5 @@ print('\n')
 
 
 print("https://github.com/oje-edu/sysinfos")
+
+print('\n')
